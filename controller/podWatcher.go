@@ -199,7 +199,7 @@ func NewRedisRecord(p *corev1.Pod, cluster string) map[string]string {
 		record["Type"] = "Notebook"
 	} else if tp, ok := p.Labels["lexun.ai/type"]; ok && tp == "inference" {
 		record["Type"] = "Inference"
-		record["App"] = p.Labels["app"]
+		record["App"] = p.Labels["lexun.ai/inference"]
 	} else if name, ok = p.Labels["training.kubeflow.org/job-name"]; ok {
 		record["Type"] = "Train"
 		record["App"] = name

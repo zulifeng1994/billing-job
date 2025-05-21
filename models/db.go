@@ -26,7 +26,7 @@ func init() {
 	dbmaxConn := 50
 
 	// Connection string for MySQL (format: user:password@tcp(host:port)/dbname?charset=utf8)
-	dsn := dbuser + ":" + dbpassword + "@tcp(" + dbhost + ":" + dbport + ")/" + dbname + "?charset=utf8&parseTime=true"
+	dsn := dbuser + ":" + dbpassword + "@tcp(" + dbhost + ":" + dbport + ")/" + dbname + "?charset=utf8&parseTime=true&loc=Local"
 
 	// Initialize GORM MySQL connection
 	var err error
